@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
-import Sidebar from './layout/Sidebar/Sidebar'
-import FollowBar from './layout/FollowBar/FollowBar'
+import Sidebar from './Sidebar/Sidebar'
+import FollowBar from './FollowBar/FollowBar'
 
 interface LayoutProps{
     children: React.ReactNode

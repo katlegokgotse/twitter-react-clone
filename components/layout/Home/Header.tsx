@@ -24,9 +24,11 @@ const Header: React.FC<HeaderProps> = ({label, showBackArrow}: HeaderProps) => {
                         className='
                             cursor-pointer
                             hover:opacity-70
-                            '/>
+                            transition
+                    '/>
                 )
             }
+            <h1 className='text-white text-xl font-semibold'>{label}</h1>
         </div>
     </div>
   )
