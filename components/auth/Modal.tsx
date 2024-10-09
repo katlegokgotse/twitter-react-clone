@@ -49,7 +49,7 @@ const Modal: React.FC<ModalProps> = ({
                 <div className='h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none'>
                     <div className='flex items-center justify-between p-10 rounded-t'>
                             <h3 className='text-3xl text-white font-bold'>{title}</h3>
-                            <button className='p-1 ml-auto border-0 text-white hover:opacity-70 transition'>
+                            <button onClick={handleClick} className='p-1 ml-auto border-0 text-white hover:opacity-70 transition'>
                                 <AiOutlineClose size={20}/>
                             </button>
                     </div>
