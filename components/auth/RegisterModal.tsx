@@ -5,6 +5,7 @@ import Modal from './Modal';
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import Link from 'next/link';
+import axios from 'axios';
 
 
 const RegisterModal = () => {
@@ -21,17 +22,26 @@ const RegisterModal = () => {
         }
         registerModal.onClose()
         loginModal.onOpen();
-    }, [isLoading, registerModal, loginModal])
+    }, [isLoading, registerModal, loginModal]);
+
     const onSubmit = useCallback(async () => {
         try {
-            setIsLoading(true);S
+            setIsLoading(true);
+
+            await axios.post('/api/register', {
+                email,
+                password,
+                username,
+                name
+            });
+
             registerModal.onClose();
         }catch (error){
             console.log(error);
         } finally {
             setIsLoading(false);
         }
-    }, [registerModal]);
+    }, [registerModal, email, password, username, name]);
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
