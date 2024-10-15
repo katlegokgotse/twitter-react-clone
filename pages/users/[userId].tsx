@@ -18,7 +18,7 @@ const UserView = () => {
     }
   return (
     <>
-        <Header showBackArrow label={fetchedUser?.username}/>
+        <Header showBackArrow label={fetchedUser?.name}/>
     </>
   )
 }

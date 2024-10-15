@@ -1,4 +1,4 @@
-import Avatar from '@/components/Avatar';
+import Avatar from '@/components/layout/FollowBar/Avatar';
 import useUsers from '@/hooks/useUsers'
 import React from 'react'
 
